@@ -1,26 +1,30 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index",
     "pages/mine/mine"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#d81e04",
     "navigationBarTitleText": "点滴",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#000000",
+    "color": "#999",
+    "selectedColor": "d81e06",
     "list":[
       {
         "pagePath":"pages/index/index",
-        "text":"首页"
+        "text":"首页",
+        "iconPath":"./images/home.png",
+        "selectedIconPath":"./images/homea.png"
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "./images/mine.png",
+        "selectedIconPath": "./images/minea.png"
       }
     ]
   },
