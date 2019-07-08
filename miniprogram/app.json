@@ -6,25 +6,25 @@
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#d81e04",
-    "navigationBarTitleText": "点滴",
+    "navigationBarBackgroundColor": "#2f906e",
+    "navigationBarTitleText": "树洞与你",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999",
-    "selectedColor": "d81e06",
+    "selectedColor": "#2f906e",
     "list":[
       {
         "pagePath":"pages/index/index",
         "text":"首页",
         "iconPath":"./images/home.png",
-        "selectedIconPath":"./images/homea.png"
+        "selectedIconPath":"./images/homem.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
         "iconPath": "./images/mine.png",
-        "selectedIconPath": "./images/minea.png"
+        "selectedIconPath": "./images/my.png"
       }
     ]
   },
