@@ -1,1 +1,4 @@
-miniprogram/pages/index/index.wxml
+
+<view>
+  <text class="text">因为你，我愿意成为一个更好的人，不想成为你的包袱，因此发奋努力，只是为了想要证明我足以与你相配。</text>
+</view>

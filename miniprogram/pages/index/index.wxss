@@ -1,1 +1,11 @@
 /* miniprogram/pages/index/index.wxss */
+
+.text {
+  position: fixed;
+  left:0;
+  top: 50%;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  margin:-100rpx 30rpx 0 30rpx;
+  text-align: justify;
+}
