@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "lin-ui": "^0.8.9",
+    "regenerator-runtime": "^0.13.7",
     "vant-weapp": "^0.5.13"
   }
 }
