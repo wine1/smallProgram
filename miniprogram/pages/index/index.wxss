@@ -1,11 +1,48 @@
-/* miniprogram/pages/index/index.wxss */
-
-.text {
+.wrap-index .header {
   position: fixed;
-  left:0;
-  top: 50%;
-  font-size: 30rpx;
-  line-height: 40rpx;
-  margin:-100rpx 30rpx 0 30rpx;
-  text-align: justify;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 36rpx;
+  line-height: 26px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrap-index .main {
+  margin-top: 26px;
+}
+
+.wrap-index .main .ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wrap-index .main .ul .li {
+  flex: 1;
+  border: 1rpx solid #999;
+}
+
+.wrap-index .wrap-input {
+  position: fixed;
+  bottom: 20rpx;
+  left: 50%;
+  width: 600rpx;
+  height: 60rpx;
+  margin-left: -300rpx;
+  background: pink;
+  border-radius: 30rpx;
+  display: flex;
+}
+
+.wrap-index .wrap-input input {
+  height: 100%;
+  flex: 4;
+}
+
+.wrap-index .wrap-input .confirm-btn {
+  flex: 1;
 }

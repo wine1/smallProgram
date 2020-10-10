@@ -10,7 +10,7 @@
 		"newFeature": true,
 		"nodeModules": true,
 		"autoAudits": false,
-		"showShadowRootInWxmlPanel": false,
+		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
@@ -32,6 +32,9 @@
 	"simulatorPluginLibVersion": {},
 	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"compileType": "miniprogram",
+	"scripts": {
+		"beforeCompile": ""
+	},
 	"condition": {
 		"search": {
 			"current": -1,

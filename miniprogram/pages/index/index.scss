@@ -1,0 +1,47 @@
+$headerHeight:26px;
+
+.wrap-index {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: 36rpx;
+        line-height: $headerHeight;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+    }
+    .main {
+        margin-top: $headerHeight;
+        .ul {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            height: 100%;
+            .li {
+                flex: 1;
+                border: 1rpx solid #999;
+            }
+        }
+    }
+
+    .wrap-input {
+        position: fixed;
+        bottom: 20rpx;
+        left: 50%;
+        width: 600rpx;
+        height: 60rpx;
+        margin-left: -300rpx;
+        background: pink;
+        border-radius: 30rpx;
+        display: flex;
+        input {
+            height: 100%;
+           flex: 4;
+        }
+        .confirm-btn {
+            flex: 1;
+        }
+    }
+}

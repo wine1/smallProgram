@@ -1,7 +1,18 @@
-<<<<<<< HEAD
-=======
+<view class="wrap-index">
+    <view class="header">{{dateToday}}</view>
+    <view class="datePicker" style="display:none">
+        <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}" formatter="{{ formatter }}" />
+    </view>
+    <view class="main"  style="height:{{windowHeight-26}}px">
+        <view class="ul">
+            <view class="li"  wx:for="{{todayList}}" wx:key="index" bindtap="inputText" data-content="{{item.content}}" data-index="{{index}}">
+                <text>{{item.content}}</text>
+            </view>
+        </view>
+    </view>
 
-<view>
-  <text class="text">因为你，我愿意成为一个更好的人，不想成为你的包袱，因此发奋努力，只是为了想要证明我足以与你相配。</text>
+    <view class="wrap-input">
+        <input type="text" value="{{inputValue}}"/>
+        <view class="confirm-btn" catchtap="confirm">确认</view>
+    </view>
 </view>
->>>>>>> 7088cfd73e660d9bbb783a396ae54a42d872c5cd

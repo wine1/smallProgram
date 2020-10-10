@@ -1,5 +1,7 @@
 //app.js
 App({
+
+
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -9,7 +11,14 @@ App({
         traceUser: true,
       })
     }
+    let systemInfo=wx.getSystemInfoSync()
+    console.log(systemInfo)
+    let windowHeight=systemInfo.windowHeight
+    this.globalData={
+      systemInfo,
+      windowHeight,
+    }
 
-    this.globalData = {}
+    
   }
 })
