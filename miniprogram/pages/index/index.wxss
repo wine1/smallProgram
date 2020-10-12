@@ -33,7 +33,7 @@
   width: 600rpx;
   height: 60rpx;
   margin-left: -300rpx;
-  background: pink;
+  background: #ffcb74;
   border-radius: 30rpx;
   display: flex;
 }

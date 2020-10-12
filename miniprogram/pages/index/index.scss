@@ -25,7 +25,6 @@ $headerHeight:26px;
             }
         }
     }
-
     .wrap-input {
         position: fixed;
         bottom: 20rpx;
@@ -33,7 +32,7 @@ $headerHeight:26px;
         width: 600rpx;
         height: 60rpx;
         margin-left: -300rpx;
-        background: pink;
+        background: #ffcb74;
         border-radius: 30rpx;
         display: flex;
         input {
@@ -45,3 +44,5 @@ $headerHeight:26px;
         }
     }
 }
+
+
