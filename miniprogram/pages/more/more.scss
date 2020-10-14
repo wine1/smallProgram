@@ -1,0 +1,18 @@
+.wrap-more {
+    .wrap-login {
+        width: 120rpx;
+        height: 120rpx;
+        margin: 160rpx auto 0;  
+        border-radius: 50%;  
+        overflow: hidden;
+        border: 2px solid #666;
+        .icon-avatar {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .user-name {
+        text-align: center;
+        margin: 30rpx 0;
+    }
+}

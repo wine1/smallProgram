@@ -11,14 +11,21 @@ App({
         traceUser: true,
       })
     }
+    //获取设备系统信息
     let systemInfo=wx.getSystemInfoSync()
     console.log(systemInfo)
     let windowHeight=systemInfo.windowHeight
+    //获取缓存信息
+    let userInfo=wx.getStorageSync('userInfo');
+    if(userInfo) {
+      userInfo=JSON.parse(userInfo)
+    }
     this.globalData={
       systemInfo,
       windowHeight,
+      userInfo
     }
-
+   
     
   }
 })

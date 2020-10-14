@@ -1,0 +1,9 @@
+{
+    "easysass.compileAfterSave": true, //保存后是否编译文件，不需要的时候可以改为false
+    "easysass.formats": [
+       {
+         "format": "expanded", //格式：expanded 不压缩 | compressed 压缩
+         "extension": ".wxss" //输出文件后缀：小程序写'wxss'
+       }
+     ]
+}

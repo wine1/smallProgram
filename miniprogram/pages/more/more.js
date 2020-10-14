@@ -1,18 +1,25 @@
 // miniprogram/pages/mine/mine.js
+const app=getApp()
+let g=app.globalData
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    username:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(g.userInfo)
+    if(g.userInfo) {
+      this.setData({
+        username:g.userInfo.username
+      })
+    }
   },
 
   /**
@@ -62,5 +69,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  toLogin() {
+    wx.navigateTo({
+      url:'../login/login'
+    })
   }
 })

@@ -1,1 +1,12 @@
 <!--miniprogram/pages/mine/mine.wxml-->
+<view class="wrap-more">
+    <view class="wrap-header">
+        <view class="wrap-login" bindtap="toLogin">
+            <image class="icon-avatar" src="../../images/icon-login.png"/>     
+        </view>
+            <view wx:if="{{username}}" class="user-name">{{username}}</view>
+
+    </view>
+
+
+</view>

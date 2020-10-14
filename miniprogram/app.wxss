@@ -1,5 +1,5 @@
 /**app.wxss**/
-@import './miniprogram_npm/vant-weapp/common/index.wxss';
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';
 page {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
     Segoe UI, Arial, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei',
@@ -32,8 +32,8 @@ button::after{
 #ea907a  
 #4f8a8b */
 
-#577590
+/* #577590
 #90be6d
 #f9c74f
 #f9844a
-#f8961e
+#f8961e */
