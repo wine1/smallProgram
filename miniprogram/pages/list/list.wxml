@@ -1,4 +1,15 @@
 <!-- pages/list/list.wxml -->
 <view class="wrap-list">
-
+    <div class="wrap-header">
+        <view>{{selectedDate}}</view>
+        <view class="datePicker" style="display:none;">
+            <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}" formatter="{{ formatter }}" />
+        </view>
+    </div>
+    <van-index-bar index-list="{{ indexList }}" highlight-color="#ea5504">
+        <view wx:for="{{everydayList}}" wx:key="index">
+            <van-index-anchor index="{{item.month}}"></van-index-anchor>
+            <van-cell wx:for="{{item.question}}" wx:key="index" title="{{item.date}} {{item.paragraph}}"></van-cell>
+        </view>
+    </van-index-bar>
 </view>

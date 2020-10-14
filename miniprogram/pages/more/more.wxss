@@ -1,1 +1,18 @@
-/* miniprogram/pages/mine/mine.wxss */
+.wrap-more .wrap-login {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 160rpx auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #666;
+}
+
+.wrap-more .wrap-login .icon-avatar {
+  height: 100%;
+  width: 100%;
+}
+
+.wrap-more .user-name {
+  text-align: center;
+  margin: 30rpx 0;
+}

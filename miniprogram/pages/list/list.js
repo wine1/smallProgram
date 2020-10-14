@@ -1,18 +1,34 @@
 // pages/list/list.js
+
+const db=wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    selectedDate:'',
+    currentDate: new Date().getTime(),
+    minDate: new Date().getTime(),
+    formatter(type, value) {
+      if (type === 'year') {
+        return `${value}年`;
+      } else 
+      if (type === 'month') {
+        return `${value}月`;
+      }
+      return value;
+    },
+    
+    indexList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12],
+    everydayList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.initData()
   },
 
   /**
@@ -62,5 +78,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onInput(event) {
+    this.setData({
+      currentDate: event.detail,
+    });
+  },
+
+  initData() {
+    db.collection('everyday').get({
+      success:((res)=>{
+        console.log(res)
+        this.setData({
+          everydayList:res.data[0].year
+        })
+      })
+    })
   }
 })

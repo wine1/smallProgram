@@ -1,0 +1,7 @@
+.wrap-login {
+  margin: 100rpx 30rpx;
+}
+
+.wrap-login .button {
+  margin-top: 60rpx;
+}

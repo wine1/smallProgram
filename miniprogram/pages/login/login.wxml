@@ -1,0 +1,11 @@
+<!--pages/login/login.wxml-->
+
+<view class="wrap-login">
+
+	<van-cell-group>
+		<van-field value="{{ username }}" label="用户名" left-icon="user-circle-o" placeholder="请输入用户名" focus bind:blur="usernameBlur"/>
+
+		<van-field value="{{ password }}" type="password" label="密码" placeholder="请输入密码" left-icon="closed-eye"  bind:blur="passwordBlur" />
+	</van-cell-group>
+	<van-button custom-class="button" type="primary" size="large" color="#d81e06" bindtap="login">登录</van-button>
+</view>
