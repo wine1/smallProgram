@@ -1,12 +1,15 @@
 // miniprogram/pages/index/index.js
 const app=getApp()
 let g=app.globalData
+const db=wx.cloud.database()
+
 Page({
   /**
    * 页面的初始数据
    */
   data: {
     dateToday:'',
+    questionToday:'',
     todayList:["","","","",""],
     currentDate: new Date().getTime(),
     minDate: new Date().getTime(),
@@ -19,20 +22,45 @@ Page({
       return value;
     },
     windowHeight:0,
-    inputValue:''
+    inputValue:'',
+    dialogShow:false
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //获取当天日期
     let today=new Date()
     let month=today.getMonth()
     let date=today.getDate()
+
+    // 获取当天的问题
+    let question=''
+    db.collection('everyday').get({
+      success:((res)=>{
+        console.log(res)
+        let year=res.data[0].year
+        question=year[month].question[date-1].paragraph
+        console.log(year,question)
+        this.setData({
+            questionToday:question
+        })
+      })
+    })
+
+    //检查登录状态
+    if(g.userInfo) {
+      this.initData()
+    }else {
+      this.setData({
+        dialogShow:true
+      })
+    }
+
     this.setData({
       dateToday:`${month+1}月${date}日`,
       windowHeight:g.windowHeight
     })
-
   },
 
   /**
@@ -92,33 +120,12 @@ Page({
       currentDate: event.detail,
     });
   },
-  /**
-   * 吊起输入框
-   */
-  inputText(e) {
-    let content=''
-    if(e.currentTarget.dataset.content) {
-      content=e.currentTarget.dataset.content
-    }
-    let i=e.currentTarget.dataset.index
-    this.data.todayList.forEach((item,index)=>{
-      // if(index===i) {
-
-      // }
-    })
-    this.setData({
-      inputValue:content
-    })
-
-    console.log(e)
-    // let content=e
+  enterDetail(e) {
+    // let content=e.
   },
 
-  confirm(){
-    if(this.data.inputValue) {
-      this.setData({
-
-      })
-    }
+  initData() {
+    console.log('init')
   }
+  
 })

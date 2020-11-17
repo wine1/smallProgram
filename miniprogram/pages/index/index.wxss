@@ -4,14 +4,14 @@
   left: 0;
   width: 100%;
   font-size: 36rpx;
-  line-height: 26px;
+  line-height: 52rpx;
   color: #333;
   font-weight: bold;
   text-align: center;
 }
 
 .wrap-index .main {
-  margin-top: 26px;
+  margin-top: 80px;
 }
 
 .wrap-index .main .ul {

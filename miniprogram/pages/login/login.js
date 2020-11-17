@@ -102,7 +102,10 @@ Page({
                   key:"userInfo",
                   data:JSON.stringify(userInfo)
                 })
-                setTimeout(()=>{wx.navigateBack()},2000)
+                setTimeout(()=>{
+                  wx.redirectTo({
+                  url:'../../pages/more/more'
+                })},2000)
                 
               }
             })
@@ -117,7 +120,10 @@ Page({
                 key:"userInfo",
                 data:JSON.stringify(userInfo)
               })
-              setTimeout(()=>{wx.navigateBack()},2000)
+              setTimeout(()=>{
+                wx.redirectTo({
+                  url:'../../pages/more/more'
+              })},2000)
             }else {
               wx.showToast({
                 icon:'none',

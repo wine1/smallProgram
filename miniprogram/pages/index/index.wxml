@@ -1,18 +1,23 @@
 <view class="wrap-index">
-    <view class="header">{{dateToday}}</view>
+    <view class="header">{{dateToday}}：<text>{{questionToday}}</text></view>
     <view class="datePicker" style="display:none">
         <van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" min-date="{{ minDate }}" formatter="{{ formatter }}" />
     </view>
-    <view class="main"  style="height:{{windowHeight-26}}px">
+    <view class="main"  style="height:{{windowHeight-80}}px">
         <view class="ul">
-            <view class="li"  wx:for="{{todayList}}" wx:key="index" bindtap="inputText" data-content="{{item.content}}" data-index="{{index}}">
+            <view class="li"  wx:for="{{todayList}}" wx:key="index" bindtap="enterDetail" data-content="{{item.content}}" data-index="{{index}}">
                 <text>{{item.content}}</text>
             </view>
         </view>
     </view>
 
-    <view class="wrap-input">
-        <input type="text" value="{{inputValue}}"/>
-        <view class="confirm-btn" catchtap="confirm">确认</view>
-    </view>
+    <van-dialog
+        title="登录体验更多功能吧~"
+        show="{{ dialogShow }}"
+        confirm-button-text="前往登录"
+        confirm-button-open-type="getUserInfo"
+        bind:confirm="getUserInfo"
+        close-on-click-overlay="true"
+    >
+    </van-dialog>
 </view>
