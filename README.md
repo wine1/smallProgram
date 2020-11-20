@@ -10,3 +10,8 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+
+
+功能点
+1. 登录注册登出
+2. 写入数据 查询 浏览数据
