@@ -1,27 +1,27 @@
 // pages/list/list.js
 
-const db=wx.cloud.database()
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    selectedDate:'',
+    selectedDate: '',
     currentDate: new Date().getTime(),
     minDate: new Date().getTime(),
     formatter(type, value) {
       if (type === 'year') {
         return `${value}年`;
-      } else 
-      if (type === 'month') {
-        return `${value}月`;
-      }
+      } else
+        if (type === 'month') {
+          return `${value}月`;
+        }
       return value;
     },
-    
-    indexList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12],
-    everydayList:[]
+
+    indexList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+    everydayList: []
   },
 
   /**
@@ -88,10 +88,10 @@ Page({
 
   initData() {
     db.collection('everyday').get({
-      success:((res)=>{
+      success: ((res) => {
         console.log(res)
         this.setData({
-          everydayList:res.data[0].year
+          everydayList: res.data[0].year
         })
       })
     })

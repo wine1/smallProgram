@@ -1,2 +1,14 @@
-<!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<!-- pages/profile/profile.wxml -->
+<view class="wrap-profile">
+    <view class="col">
+        <text class="col-text">头像</text>
+        <van-uploader bindtap='changeAvatar'>
+            <image src="{{avatar}}" alt="" />
+        </van-uploader>
+    </view>
+    <view class="col">
+        <text class="col-text">昵称</text>
+        <text>{{username}}</text>
+    </view>
+    <van-button type="primary" bindtap="loginOut">退出登录</van-button>
+</view>

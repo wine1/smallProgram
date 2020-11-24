@@ -1,25 +1,23 @@
 // miniprogram/pages/mine/mine.js
-const app=getApp()
-let g=app.globalData
+const app = getApp()
+let g = app.globalData
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    username:''
+    userInfo: {
+      username: '',
+      avatar: '../../images/icon-login.png'
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(g.userInfo)
-    if(g.userInfo) {
-      this.setData({
-        username:g.userInfo.username
-      })
-    }
+
   },
 
   /**
@@ -33,7 +31,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log(g.userInfo)
+    if (g.userInfo) {
+      this.setData({
+        username: g.userInfo.username,
+        avatar: g.userInfo.avatar
+      })
+    }
   },
 
   /**
@@ -72,8 +76,17 @@ Page({
   },
 
   toLogin() {
-    wx.navigateTo({
-      url:'../login/login'
-    })
+    if (this.data.username) {
+      wx.navigateTo({
+        url: '../profile/profile'
+      })
+    } else {
+      wx.navigateTo({
+        url: '../login/login'
+      })
+    }
+
   }
 })
+
+

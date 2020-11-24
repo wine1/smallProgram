@@ -2,9 +2,9 @@
 <view class="wrap-more">
     <view class="wrap-header">
         <view class="wrap-login" bindtap="toLogin">
-            <image class="icon-avatar" src="../../images/icon-login.png"/>     
+            <image class="icon-avatar" src="{{userInfo.avatar}}"/>     
         </view>
-            <view wx:if="{{username}}" class="user-name">{{username}}</view>
+            <view wx:if="{{userInfo.username}}" class="user-name">{{userInfo.username}}</view>
 
     </view>
 
